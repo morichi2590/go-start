@@ -1,12 +1,21 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "log"
+    "net/http"
+)
+
+func homePage(w http.ResponseWriter, r *http.Request){
+    fmt.Fprintf(w, "Welcome browser!")
+    fmt.Println("api run success!")
+}
+
+func handleRequests() {
+    http.HandleFunc("/", homePage)
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}
 
 func main() {
-    a1 := map[string]int{
-        "0": 100,
-        "1": 200,
-    }
-    _=a1
-    fmt.Println(a1["0"]+a1["0"])
+    handleRequests()
 }
