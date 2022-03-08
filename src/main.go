@@ -18,6 +18,7 @@ var Articles []Article
 func returnAllArticles(w http.ResponseWriter, r *http.Request){
     Articles = []Article{
         Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
+        Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
     }
     fmt.Println("Endpoint Hit: returnAllArticles")
     json.NewEncoder(w).Encode(Articles)
@@ -31,7 +32,7 @@ func homePage(w http.ResponseWriter, r *http.Request){
 func handleRequests() {
     http.HandleFunc("/", homePage)
     http.HandleFunc("/articles", returnAllArticles)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Fatal(http.ListenAndServe(":9000", nil))
 }
 
 func main() {
