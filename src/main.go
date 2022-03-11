@@ -20,6 +20,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
         Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
         Article{Title: "larning", Desc: "larning golang", Content: "golang api"},
         Article{Title: "myblog open", Desc: "start myblog", Content: "blog write for developer"},
+        Article{Title: "timecard", Desc: "start timecard project", Content: "for my company"},
     }
     fmt.Println("Endpoint Hit: returnAllArticles")
     json.NewEncoder(w).Encode(Articles)
