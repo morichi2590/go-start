@@ -28,6 +28,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
         Article{Title: "mailsystem", Desc: "learn mailsystem,", Content: "spf DKIM"},
         Article{Title: "modal...", Desc: "modal very hard", Content: "hard.."},
         Article{Title: "front", Desc: "front precomplete", Content: "a long time.."},
+        Article{Title: "vue", Desc: "vue learning", Content: "i think simple"},
     }
     fmt.Println("Endpoint Hit: returnAllArticles")
     json.NewEncoder(w).Encode(Articles)
