@@ -36,6 +36,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
         Article{Title: "time", Desc: "DateTime method", Content: "learn"},
         Article{Title: "javascript", Desc: "onclick", Content: "from action change"},
         Article{Title: "beyond", Desc: "beyond last", Content: "ceo is nice human.because he is smile man"},
+        Article{Title: "girl friend", Desc: "finished love", Content: "she was good human"},
     }
     fmt.Println("Endpoint Hit: returnAllArticles")
     json.NewEncoder(w).Encode(Articles)
